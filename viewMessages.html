@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Messages</title>
+    <link rel="stylesheet" href="css/viewMessages.css">
+    <script src="js/authCheck.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>All Messages</h1>
+        <div class="messages-display">
+            <table class="messages-table">
+                <thead>
+                    <tr>
+                        <th>Sender Name</th>
+                        <th>Receiver Name</th>
+                        <th>Message</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody id="messageList">
+                    <!-- Messages will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+        <button onclick="location.href='messaging.html'">Back to Chat</button>
+        <button id="logoutButton">Logout</button>
+        <button onclick="location.href='homepage.html'">Home</button> <!-- Home Button -->
+    </div>
+
+    <script src="js/viewMessages.js"></script>
+</body>
+</html>

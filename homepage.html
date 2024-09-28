@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp Homepage</title>
+    <link rel="stylesheet" href="css/homepage.css">
+    <script src="js/homepage.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to ChatApp</h1>
+        <nav>
+            <ul>
+                <li><button class="login-button" onclick="location.href='login.html'">Login</button></li>
+                <li><button class="register-button" onclick="location.href='register.html'">Register</button></li>
+                <li><button class="message-button" onclick="location.href='messaging.html'">Message</button></li>
+                <li><button class="view-messages-button" onclick="location.href='viewMessages.html'">View Messages</button></li>
+                <li><button class="chat-screen-button" onclick="location.href='chatscreen.html'">Chat Screen</button></li>
+                <li><button class="logout-button" onclick="logout()">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Connect with Friends</h2>
+            <p>Chat with your friends in real-time. Join the community and start chatting today!</p>
+            <button onclick="location.href='login.html'">Get Started</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ChatApp. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function logout() {
+            // Clear the JWT token and username from local storage
+            localStorage.removeItem('jwtToken');
+            localStorage.removeItem('username');
+            
+            // Redirect to the login page
+            location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

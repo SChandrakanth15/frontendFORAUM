@@ -1,0 +1,116 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to right, #e9ecef, #f8f9fa); /* Gradient background */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Container styles */
+.container {
+    background: #ffffff; /* White background */
+    padding: 40px; /* Padding inside the container */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    max-width: 400px; /* Maximum width */
+    width: 100%; /* Full width up to max */
+    text-align: center; /* Center align text */
+}
+
+/* Heading styles */
+h1 {
+    margin-bottom: 25px; /* Space below the heading */
+    color: #007BFF; /* Blue color for heading */
+    font-size: 24px; /* Larger font size */
+    text-transform: uppercase; /* Uppercase heading */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Form input styles */
+input[type="text"],
+input[type="password"] {
+    padding: 15px; /* Padding inside the input */
+    margin: 15px 0; /* Spacing between inputs */
+    border: 1px solid #ced4da; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Focus styles for inputs */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007BFF; /* Blue border on focus */
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light shadow on focus */
+}
+
+/* Button styles */
+button {
+    background: #007BFF; /* Blue button */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    padding: 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+/* Hover effects for buttons */
+button:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Home button styles */
+.homeButton {
+    background: #6c757d; /* Grey button */
+    margin-top: 20px; /* Increased spacing above */
+    padding: 15px 30px; /* Increased padding for larger size */
+    border-radius: 5px; /* Rounded corners */
+    color: #fff; /* White text */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s, transform 0.2s; /* Smooth transition */
+    text-align: center; /* Center align text */
+}
+
+/* Hover effects for home button */
+.homeButton:hover {
+    background: #5a6268; /* Darker grey on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px; /* Reduce padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 22px; /* Slightly smaller heading on small screens */
+    }
+
+    button,
+    .homeButton {
+        padding: 12px; /* Reduce button padding on smaller screens */
+        font-size: 14px; /* Smaller font size for buttons */
+    }
+}

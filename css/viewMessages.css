@@ -1,0 +1,102 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Text color */
+}
+
+/* Container styles */
+.container {
+    max-width: 800px; /* Maximum width */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Padding around the content */
+    background: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Heading styles */
+h1 {
+    text-align: center; /* Center align heading */
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 2rem;
+    color: #007BFF; /* Blue color for heading */
+}
+
+/* Table styles */
+.messages-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #f8f9fa; /* Slightly lighter background for table */
+    border-radius: 8px;
+    overflow: hidden; /* Ensure border radius applies to the entire table */
+}
+
+/* Table header styles */
+.messages-table th {
+    padding: 12px;
+    background-color: #007BFF; /* Blue background for table headers */
+    color: white; /* White text */
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Table body styles */
+.messages-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Alternate row coloring */
+.messages-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey for alternate rows */
+}
+
+/* Table row hover effect */
+.messages-table tr:hover {
+    background-color: #e9ecef; /* Slight hover effect for rows */
+}
+
+/* Back button styles */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #007BFF; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .messages-table th, .messages-table td {
+        padding: 10px; /* Adjust table padding for smaller screens */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button font size for small screens */
+    }
+}

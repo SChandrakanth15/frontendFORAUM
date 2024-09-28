@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp</title>
+    <link rel="stylesheet" href="css/chatscreen.css"> <!-- Ensure the path is correct -->
+    <script src="js/authCheck.js" defer></script>
+    <script src="js/menuButton.js" defer></script> <!-- Link to the new JS file for the menu button -->
+</head>
+<body>
+    <div id="menuBar" class="menu-bar">
+        <div id="loggedInUser">
+            <!-- This will show the logged-in username -->
+            Logged in as: <span id="loggedInUsername"></span>
+        </div>
+        <button onclick="location.href='homepage.html'">Home</button>
+        <div class="menu-options">
+            <button id="editUsernameBtn">Edit</button>
+            <button id="deleteAccountBtn">Delete</button>
+        </div>
+    </div>
+
+    <div id="chatAppContainer" class="split-screen">
+        <div id="userListContainer" class="left-pane">
+            <h2>Users</h2>
+            <ul id="userList">
+                <!-- List of users will be dynamically populated here -->
+            </ul>
+        </div>
+
+        <div id="chatContainer" class="right-pane">
+            <h2>Chat with <span id="chatWithUsername"></span></h2>
+            <div id="messageDisplay">
+                <!-- Chat messages will be displayed here -->
+            </div>
+            <div id="messageInputContainer">
+                <input type="text" id="messageInput" placeholder="Type your message here..." maxlength="250" />
+                <button id="sendButton">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/chatscreen.js" defer></script> <!-- Ensure the path is correct -->
+</body>
+</html>

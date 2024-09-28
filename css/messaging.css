@@ -1,0 +1,81 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Text color */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Container styles */
+.container {
+    width: 100%;
+    max-width: 600px; /* Maximum width for the container */
+    padding: 20px; /* Padding inside the container */
+    background: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Message area styles */
+.message-area {
+    margin-bottom: 20px; /* Space below the message area */
+}
+
+/* Textarea for message input */
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the textarea */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    resize: none; /* Disable resizing */
+}
+
+/* Input for receiver's username */
+input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    margin-top: 10px; /* Space above the input */
+}
+
+/* Button styles */
+button {
+    background: #007BFF; /* Blue background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Space above the button */
+    transition: background 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+/* Messages display styles */
+.messages-display {
+    margin-top: 20px; /* Space above the messages display */
+}
+
+#messageList {
+    list-style: none; /* Remove bullet points */
+}
+
+#messageList li {
+    margin: 5px 0; /* Space between messages */
+}

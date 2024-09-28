@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="css/messaging.css">
+    <script src="js/authCheck.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Chat App</h1>
+        <div class="message-area">
+            <textarea id="messageInput" placeholder="Type your message here..." rows="4"></textarea>
+            <input type="text" id="receiver" placeholder="Receiver's Username" required>
+            <button id="sendButton">Send</button>
+            <button id="retrieveButton" onclick="location.href='viewMessages.html'">Retrieve Messages</button>
+        </div>
+        <button id="logoutButton">Logout</button>
+        <button onclick="location.href='homepage.html'">Home</button> <!-- Home Button -->
+    </div>
+
+    <script src="js/messaging.js"></script>
+</body>
+</html>
