@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loggedInUsernameDisplay.textContent = loggedInUsername;
     }
 
-    fetch("http://localhost:8082/users/except", {
+    fetch("http://usermanagementservice:8082/users/except", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function fetchChatHistory(selectedUsername) {
     const token = jwtObject ? JSON.parse(jwtObject).token : null; 
     const loggedInUsername = localStorage.getItem('username');
 
-    fetch(`http://localhost:8080/messages/history/${selectedUsername}`, {
+    fetch(`http://messageservice:8080/messages/history/${selectedUsername}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -112,7 +112,7 @@ document.getElementById('sendButton').addEventListener('click', function () {
     }
 
     // Send the message to the server
-    fetch('http://localhost:8080/messages/send', {
+    fetch('http://messageservice:8080/messages/send', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

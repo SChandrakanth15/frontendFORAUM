@@ -28,7 +28,7 @@ function editUsername(newUsername) {
     const jwtObject = localStorage.getItem('jwtToken');
     const token = jwtObject ? JSON.parse(jwtObject).token : null;
 
-    fetch('http://localhost:8082/users/update', {
+    fetch('http://usermanagementservice:8082/users/update', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function deleteAccount() {
     const jwtObject = localStorage.getItem('jwtToken');
     const token = jwtObject ? JSON.parse(jwtObject).token : null;
 
-    fetch('http://localhost:8082/users/delete', {
+    fetch('http://usermanagementservice:8082/users/delete', {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',

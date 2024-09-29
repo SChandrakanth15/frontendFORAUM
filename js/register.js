@@ -3,7 +3,7 @@ function checkLoginStatus() {
     const token = localStorage.getItem('jwtToken'); // Replace with your actual token storage method
     if (token) {
         alert("Please log out to register a new account."); // Alert message
-        window.location.href = 'homepage.html'; // Redirect to homepage
+        window.location.href = 'index.html'; // Redirect to homepage
     }
 }
 
@@ -27,7 +27,7 @@ document.getElementById('registerForm').addEventListener('submit', async functio
     }
 
     try {
-        const response = await fetch('http://localhost:8082/users/register', {
+        const response = await fetch('http://usermanagementservice:8082/users/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

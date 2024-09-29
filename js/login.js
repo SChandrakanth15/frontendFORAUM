@@ -6,7 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     const loginMessage = document.getElementById('loginMessage');
 
     try {
-        const response = await fetch('http://localhost:8081/auth/login', {
+        const response = await fetch('http://authservice:8081/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -28,7 +28,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
 
             // Redirect to the homepage after a short delay
             setTimeout(() => {
-                window.location.href = 'homepage.html'; // Redirect to the homepage
+                window.location.href = 'index.html'; // Redirect to the homepage
             }, 1000); // Redirect after 1 second
         } else if (response.status === 400) {
             loginMessage.textContent = 'Invalid username or password. Please try again.';

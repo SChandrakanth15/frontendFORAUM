@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const messageList = document.getElementById("messageList");
 
-    fetch("http://localhost:8080/messages/user", { 
+    fetch("http://messageservice:8080/messages/user", { 
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
