@@ -34,7 +34,7 @@ document.getElementById('sendButton').addEventListener('click', async function (
     }
 
     try {
-        const response = await fetch('http://messageservice:8080/messages/send', {
+        const response = await fetch('https://exr-138-messageservice.nicepebble-15cceb5b.southindia.azurecontainerapps.io/messages/send', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
