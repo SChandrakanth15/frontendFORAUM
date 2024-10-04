@@ -27,7 +27,7 @@ document.getElementById('registerForm').addEventListener('submit', async functio
     }
 
     try {
-        const response = await fetch('https://exr-138-usermanagementservice.nicepebble-15cceb5b.southindia.azurecontainerapps.io/users/register', {
+        const response = await fetch(`${config.userManagementServiceUrl}/users/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

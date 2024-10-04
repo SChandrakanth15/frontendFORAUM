@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loggedInUsernameDisplay.textContent = loggedInUsername;
     }
 
-    fetch("https://exr-138-usermanagementservice.nicepebble-15cceb5b.southindia.azurecontainerapps.io/users/except", {
+    fetch(`${config.userManagementServiceUrl}/users/except`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function fetchChatHistory(selectedUsername) {
     const token = jwtObject ? JSON.parse(jwtObject).token : null; 
     const loggedInUsername = localStorage.getItem('username');
 
-    fetch(`https://exr-138-messageservice.nicepebble-15cceb5b.southindia.azurecontainerapps.io/messages/history/${selectedUsername}`, {
+    fetch(`${config.messageBaseUrl}/messages/history/${selectedUsername}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -112,7 +112,7 @@ document.getElementById('sendButton').addEventListener('click', function () {
     }
 
     // Send the message to the server
-    fetch('https://exr-138-messageservice.nicepebble-15cceb5b.southindia.azurecontainerapps.io/messages/send', {
+    fetch(`${config.messageBaseUrl}/messages/send`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const messageList = document.getElementById("messageList");
 
-    fetch("https://exr-138-messageservice.nicepebble-15cceb5b.southindia.azurecontainerapps.io/messages/user", { 
+    fetch(`${config.messageBaseUrl}/messages/user`, { 
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
