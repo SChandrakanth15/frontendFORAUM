@@ -28,7 +28,7 @@ function editUsername(newUsername) {
     const jwtObject = localStorage.getItem('jwtToken');
     const token = jwtObject ? JSON.parse(jwtObject).token : null;
 
-    fetch('https://exr-138-usermanagementservice.nicepebble-15cceb5b.southindia.azurecontainerapps.io/users/update', {
+    fetch(`${config.userManagementServiceUrl}/users/update`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function deleteAccount() {
     const jwtObject = localStorage.getItem('jwtToken');
     const token = jwtObject ? JSON.parse(jwtObject).token : null;
 
-    fetch('https://exr-138-usermanagementservice.nicepebble-15cceb5b.southindia.azurecontainerapps.io/users/delete', {
+    fetch(`${config.userManagementServiceUrl}/users/delete`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',

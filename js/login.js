@@ -6,7 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     const loginMessage = document.getElementById('loginMessage');
 
     try {
-        const response = await fetch('https://exr-138-authservice.nicepebble-15cceb5b.southindia.azurecontainerapps.io/auth/login', {
+        const response = await fetch(`${config.authBaseUrl}/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
